@@ -9,6 +9,10 @@
 }
 
 /* shered style */
+header{
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .sub-title{
   color: rgba(130, 130, 130, 1);
   font-weight: 500;
@@ -17,29 +21,43 @@
 .display-flex{
   display: flex;
 }
+.primary-btn{
+  background: linear-gradient(to right, rgba(251, 162, 79, 1),rgba(255, 30, 30, 1));
+  padding: 24px 32px;
+  gap: 16px;
+  border-radius: 100px;
+  color: #ffffff;
+  border: none;
+  margin-top: 20px;
+}
 
 /* diet section start */
 .left-container{
   padding-left: 50px;
+  width: 700px;
 }
 .hero-container{
+  margin: 0 auto;
+  gap: 120px;
   padding-top: 120px;
-  gap: 220px;
 }
 .diet-img-container{
   position: relative;
+   width: 100%;
+  height: 100%;
 }
 .diet-container-img2{
   position: absolute;
   top: -60px;
   left: -120px;
   z-index: 1;
-  width: 750px;
-  height: 650px;
-
+  width: 100%;
+  height: 100%;
 }
 .diet-container-img{
   z-index: 2;
+    max-width: 592px;
+  height: 640px;
 }
 .diet-container{
   display: flex;
@@ -55,23 +73,35 @@
 .skip{
   color: rgba(251, 162, 79, 1);
 }
-.diet-btn{
-  background: linear-gradient(to right, rgba(251, 162, 79, 1),rgba(255, 30, 30, 1));
-  padding: 24px 32px;
-  gap: 16px;
-  border-radius: 100px;
-  color: #ffffff;
-  border: none;
-  margin-top: 20px;
-}
-.diet-container-img{
-  max-width: 592px;
-  height: 640px;
-}
 
+/* banner container style */
+.banner-container{
+  background-image: url('../images/shapes/Frame\ 58.jpg');
+  background-size: 100%;
+  max-width: 1440px;
+  border-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  padding: 120px 120px 0 120px;
+}
+.banner-container-img{
+  width: 100%;
+}
+.banner-title{
+  font-size: 2.85rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.banner-discription{
+    color: rgba(130, 130, 130, 1);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
 
 @media screen and (max-width:576px) {
-  .hero-container{
+  .hero-container,
+  .banner-container{
     flex-direction: column;
   }
   .diet-container-img,
@@ -81,15 +111,23 @@
   .diet-container-img2{
     position: absolute;
     top: -20px;
-    left: 5px;
+    left: -55px;
   }
 }
 @media screen and (min-width:576px) and (max-width:992px){
   .hero-container{
     flex-direction: column;
   }
-    .diet-container-img,
-  .diet-container-img2{
+  .diet-img-container{
     justify-items: center;
+    display: block;
+    align-items: center;
+    position:relative;
+    width: 100%;
+  }
+  .diet-container-img2{
+    position: absolute;
+    top: -50px;
+    left: -40px;
   }
 }
